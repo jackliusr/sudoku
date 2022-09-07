@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
-
+import 'package:package_info_plus/package_info_plus.dart';
 import 'main.dart';
 import 'styles.dart';
 
@@ -12,6 +12,11 @@ class SplashScreenPage extends StatefulWidget {
 }
 
 class SplashScreenPageState extends State<SplashScreenPage> {
+  _fetchVersion() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    MyApp.versionNumber = packageInfo.version;
+  }
+
   @override
   void initState() {
     super.initState();
@@ -35,7 +40,7 @@ class SplashScreenPageState extends State<SplashScreenPage> {
       useLoader: true,
       loaderColor: Styles.primaryColor,
       loadingText: const Text(
-        'VarunS2002',
+        'Jackliusr',
         style: TextStyle(color: Colors.grey),
       ),
       loadingTextPadding: const EdgeInsets.only(top: 10.0),

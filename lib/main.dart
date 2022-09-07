@@ -24,7 +24,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String versionNumber = '2.4.1';
+  static String versionNumber = '1.0.0';
 
   @override
   Widget build(BuildContext context) {
